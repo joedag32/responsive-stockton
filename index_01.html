@@ -33,17 +33,40 @@
 }
 #rsc-logo a {
   display: block;
-  width: 298px;
-  height: 123px;
+  width: 145px;
+  height: 60px;
   text-indent: -9999em;
   background: url(images/rsc-logo.png) no-repeat top left;
   background-color: #ff0000;
 }
+#mobile-nav-btn {
+  float: right;
+  display: block;
+  margin: 4px 8px 0 0;
+  padding: 7px 10px;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+#mobile-nav-btn .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+#mobile-nav-btn .icon-bar+.icon-bar {
+  margin-top: 3px;
+}
+#rsc-nav-secondary, #nav {
+  display: none;
+}
 #top-nav {
   position: absolute;
   width: 40%;
-  margin: 2em 0 0 50%;
-  font-size: 90%;
+  margin: 64px 0 0 55%;
+  font-size: 85%;
   background-color: #000;
 }
 #top-nav ul {
@@ -59,14 +82,19 @@
   text-decoration: underline;
   background: none;
 }
-#search, #search form {
-  display: inline;
+#search form {
+  margin: 20px auto;
+  text-align: center;
 }
 #nav {
-  width: 40%;
-  font-size: 90%;
+  width: 46%;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  font-size: 85%;
   letter-spacing: 0;
   height: 1%;
+  background-color: #000;
+  border-right: 1px solid #4e4e4e;
 }
 #nav ul {
   display: block;
@@ -85,21 +113,23 @@
     text-align: right;
   }
 #nav a {
-  padding: 9px 10px;
-  color: #000;
+  padding: 5px 10px;
+  color: #fff;
+  white-space: normal;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 #nav a:hover {
-  background-color: #fff;
-  color: #4178a1;
+  text-decoration: underline;
+  background: none;
 }
 #story {
   position: relative;
-  max-width: 1600px;
-  height: 400px;
+  max-width: 1400px;
   margin: 0 auto;
-  background: url(images/students_computer_lab.jpg) no-repeat center top;
-  background-size: cover;
+}
+#story .cycle-slideshow img {
+  width: 100%;
+  height: auto;
 }
 #story h2 {
   margin: 0;
@@ -112,11 +142,19 @@
 #story h2 a:hover {
   text-decoration: underline;
 }
-#story-info {
+#story p {
+  display: none;
+}
+#story-nav {
+  display: none;
+}
+#adv-custom-caption {
   position: absolute;
-  top: 20px;
-  left: 40px;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
   color: #fff;
+  background: #000;
 }
 #hp-news-events {
   max-width: 960px;
@@ -137,7 +175,15 @@
 } 
 
 @media all and (min-width: 35.5em) {
+  #rsc-logo a {
+    width: 298px;
+    height: 123px;
+  }
+  #mobile-nav-btn {
+    display: none;
+  }
   #rsc-nav-secondary {
+    display: block;
     margin-left: 300px;
     text-align: right;
   }
@@ -151,15 +197,57 @@
   #top-nav ul {
     width: 100%;
   }
+  #search, #search form {
+    display: inline;
+  }
+  #search form {
+    margin: 0;
+    text-align: left;
+  }
   #nav {
+  	display: block;
     width: 100%;
+    margin: 0;
+    font-size: 90%;
     background: url(images/nav_bg.png) repeat-x top left #4178a1;
+    border: none;
+  }
+  #nav a {
+    padding: 9px 10px;
+    color: #000;
+    white-space: no-wrap;
+  }
+  #nav a:hover {
+    text-decoration: none;
+    color: #4178a1;
+    background-color: #fff;
   }
   #top-nav li, #nav li {
     display: inline-block;
   }
+  #story p {
+    display: block;
+  }
+  #story-nav {
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+  }
+  #adv-custom-caption {
+    bottom: 40px;
+    left: 40px;
+    padding: 1em;
+    color: #fff;
+    background: rgba(0,0,0);
+    background: rgba(0,0,0,0.5);
+  }
 }
 </style>
+
+
 
 </head>
 
@@ -168,6 +256,11 @@
 <div id="header" class="pure-g">
   <div id="rsc-branding" class="pure-u-1">
     <h1 id="rsc-logo"><a href="#">The Richard Stockton College of New Jersey</a></h1>
+    <button type="button" id="mobile-nav-btn" title="Toggle Main Navigation">
+    	<span class="icon-bar"></span>
+    	<span class="icon-bar"></span>
+    	<span class="icon-bar"></span>
+    </button>
     <div id="rsc-nav-secondary">
 	  <div class="pure-u-1">
 		<div id="top-nav" class="pure-menu pure-menu-open pure-menu-horizontal">
@@ -203,11 +296,26 @@
   </div>
 </div>
 <div id="story">
-  <div id="story-info">
-    <h2><a href="#">Story Title</a></h2>
-    <p>A short sample or description can go here about the story.</p>
-    <a class="pure-button" href="#">Learn More</a>
-  </div>
+	<div class="cycle-slideshow"
+    	data-cycle-fx="scrollHorz"
+    	data-cycle-swipe=true
+    	data-cycle-swipe-fx=scrollHorz
+    	data-cycle-timeout="6000"
+    	data-cycle-auto-height="4:2"
+    	data-cycle-prev="#prev"
+    	data-cycle-next="#next"
+    	data-cycle-caption="#adv-custom-caption"
+    	data-cycle-caption-template="<h2><a href='{{storyLink}}'>{{alt}}</a></h2> <p><a href='{{storyLink}}'>{{storyTeaser}}</a></p>"
+    	>
+    	<img src="images/stories/dancers.jpg" alt="Dancers" data-story-teaser="Dance in front of the Unified Science Center" data-story-link="http://www.cnn.com">
+    	<img src="images/stories/fall_path.jpg" alt="The Story Title Goes Here" data-story-teaser="A very brief teaser for the story would go here" data-story-link="http://www.google.com">
+    	<img src="images/stories/campus_center.jpg" alt="Campus Center" data-story-teaser="A pretty awesome building and place for students" data-story-link="http://www.yahoo.com">
+	</div>
+	<div id="story-nav">
+    	<a href=# id="prev">Prev</a> 
+    	<a href=# id="next">Next</a>
+	</div>
+	<div id="adv-custom-caption"></div>
 </div>
 <div id="hp-news-events" class="pure-g">
   <div id="hp-news" class="pure-u-1 pure-u-md-2-3">
@@ -243,5 +351,15 @@
 	</div>
 </div>
 </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<script src="http://malsup.github.io/min/jquery.cycle2.swipe.min.js"></script>
+<script>
+$("#mobile-nav-btn").click(function() {
+  $("#rsc-nav-secondary, #nav").toggle();
+});
+</script>
+
 </body>
 </html>
