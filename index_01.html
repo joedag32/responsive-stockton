@@ -28,22 +28,23 @@
   margin: 0 auto;
 }
 #rsc-logo {
-  float: left;
   margin: 0;
+  padding: 6px;
 }
 #rsc-logo a {
   display: block;
-  width: 145px;
-  height: 60px;
+  width: 201px;
+  height: 36px;
+  margin: 0 auto;
   text-indent: -9999em;
-  background: url(images/rsc-logo.png) no-repeat top left;
-  background-color: #ff0000;
+  background: url(images/rsc_logo_mobile.png) no-repeat top left;
 }
 #mobile-nav-btn {
-  float: right;
+  position: absolute;
   display: block;
-  margin: 4px 8px 0 0;
-  padding: 7px 10px;
+  top: 12px;
+  right: 10px;
+  padding: 6px;
   background: none;
   border: 0;
   box-shadow: none;
@@ -133,7 +134,9 @@
 }
 #story h2 {
   margin: 0;
-  font-size: 1.6em
+  padding: .4em;
+  font-size: 1em;
+  font-weight: normal;
 }
 #story h2 a {
   text-decoration: none;
@@ -145,6 +148,13 @@
 #story p {
   display: none;
 }
+#story p a {
+  text-decoration: none;
+  color: #fff;
+}
+#story p a:hover {
+  text-decoration: underline;
+}
 #story-nav {
   display: none;
 }
@@ -153,8 +163,10 @@
   z-index: 1000;
   bottom: 0;
   left: 0;
+  width: 100%;
   color: #fff;
-  background: #000;
+  background: rgba(0,0,0);
+  background: rgba(0,0,0,0.5);
 }
 #hp-news-events {
   max-width: 960px;
@@ -175,9 +187,15 @@
 } 
 
 @media all and (min-width: 35.5em) {
+  #rsc-logo {
+    float: left;
+    padding: 0;
+  }
   #rsc-logo a {
     width: 298px;
     height: 123px;
+    margin: 0;
+    background: url(images/rsc-logo.png) no-repeat top left;
   }
   #mobile-nav-btn {
     display: none;
@@ -236,13 +254,15 @@
     left: 50%;
     text-align: center;
   }
+  #story h2 {
+    font-size: 1.6em
+  }
   #adv-custom-caption {
     bottom: 40px;
     left: 40px;
+    width: 40%;
     padding: 1em;
     color: #fff;
-    background: rgba(0,0,0);
-    background: rgba(0,0,0,0.5);
   }
 }
 </style>
