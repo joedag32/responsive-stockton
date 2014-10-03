@@ -15,7 +15,12 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
   <!--<![endif]-->
   
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,700' rel='stylesheet' type='text/css'>
+  
 <style>
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
 #site-wrapper {
   margin: 0 auto;
 }
@@ -155,6 +160,9 @@
 #story p a:hover {
   text-decoration: underline;
 }
+#story #no-template-pager {
+  display: none;
+}
 #story-nav {
   display: none;
 }
@@ -172,11 +180,32 @@
   max-width: 960px;
   margin: 0 auto;
 }
+#hp-news-events h3 {
+  margin: 1em;
+  font-size: 1.4em;
+  font-weight: normal;
+}
+#hp-news-events ul {
+  list-style: none;
+  padding: 0 1.4em;
+}
 #hp-news {
-  background-color: #a7a9ac;
+  background-color: #ededed;
+}
+#hp-news li {
+  margin: .5em 0;
+  font-size: 85%;
+}
+#hp-news li a {
+  text-decoration: none;
+  color: #0069aa;
+}
+#hp-news li a:hover {
+  text-decoration: underline;
+  color: #002a5c;
 }
 #hp-events {
-  background-color: #6c6f70;
+  background-color: #f7f7f7;
 }
 #footer {
   letter-spacing: 0;
@@ -245,6 +274,18 @@
   }
   #story p {
     display: block;
+  }
+  #story #no-template-pager {
+    display: block;
+    position: absolute;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1000;
+  }
+  #story #no-template-pager img {
+    margin: 0 0 0 6px;
+    padding: 4px;
+    background: #fff;
   }
   #story-nav {
     position: absolute;
@@ -326,10 +367,18 @@
     	data-cycle-next="#next"
     	data-cycle-caption="#adv-custom-caption"
     	data-cycle-caption-template="<h2><a href='{{storyLink}}'>{{alt}}</a></h2> <p><a href='{{storyLink}}'>{{storyTeaser}}</a></p>"
+    	data-cycle-pager="#no-template-pager"
+    	data-cycle-pager-template=""
     	>
     	<img src="images/stories/dancers.jpg" alt="Dancers" data-story-teaser="Dance in front of the Unified Science Center" data-story-link="http://www.cnn.com">
     	<img src="images/stories/fall_path.jpg" alt="The Story Title Goes Here" data-story-teaser="A very brief teaser for the story would go here" data-story-link="http://www.google.com">
     	<img src="images/stories/campus_center.jpg" alt="Campus Center" data-story-teaser="A pretty awesome building and place for students" data-story-link="http://www.yahoo.com">
+	</div>
+	<div id="no-template-pager" class="cycle-pager external">
+        <img src="images/stories/dancers.jpg" alt="Dancers" title="Dance in front of the Unified Science Center" width="75" height="75">
+    	<img src="images/stories/fall_path.jpg" alt="The Story Title Goes Here" title="A very brief teaser for the story would go here" width="75" height="75">
+    	<img src="images/stories/campus_center.jpg" alt="Campus Center" title="A pretty awesome building and place for students" width="75" height="75">
+
 	</div>
 	<div id="story-nav">
     	<a href=# id="prev">Prev</a> 
@@ -341,16 +390,16 @@
   <div id="hp-news" class="pure-u-1 pure-u-md-2-3">
     <h3>News</h3>
     <ul>
-      <li><a href="#">Headline goes here</a></li>
-      <li><a href="#">Headline goes here</a></li>
-      <li><a href="#">Headline goes here</a></li>
-      <li><a href="#">Headline goes here</a></li>
+      <li><a href="#">Stockton Board Votes to Petition to Be Recognized as Comprehensive University</a></li>
+      <li><a href="#">Stockton #9 in Public Regional Universities of the North</a></li>
+      <li><a href="#">Stockton Dedicates Dr. Demetrios Constantelos Hellenic Collection and Reading Room</a></li>
+      <li><a href="#">Stockton’s ‘You Make the Difference’ Campaign Raises $25.36 Million, Exceeding Goals</a></li>
     </ul>
   </div>
   <div id="hp-events" class="pure-u-1 pure-u-md-1-3">
     <h3>Events</h3>
     <ul>
-      <li><a href="#">Event goes here</a></li>
+      <li><div class="event-date">October 31</div><a href="#">Event goes here</a></li>
       <li><a href="#">Event goes here</a></li>
       <li><a href="#">Event goes here</a></li>
       <li><a href="#">Event goes here</a></li>
