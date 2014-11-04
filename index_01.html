@@ -210,16 +210,16 @@ body {
 #hp-news {
   background-color: #ededed;
 }
-#hp-news li {
+#hp-news li, #hp-events li {
   margin: .5em 0;
   font-size: 80%;
   line-height: 1.5em;
 }
-#hp-news li a {
+#hp-news li a, #hp-events li a {
   text-decoration: none;
   color: #0069aa;
 }
-#hp-news li a:hover {
+#hp-news li a:hover, #hp-events li a:hover {
   text-decoration: underline;
   color: #002a5c;
 }
@@ -231,13 +231,35 @@ body {
 #hp-events {
   background-color: #f7f7f7;
 }
+#hp-events .event-date {
+  display: block;
+  color: #666;
+}
 #hp-ads-audience {
   max-width: 960px;
   margin: 0 auto;
 }
 #footer {
+  font-size: 80%;
+  background: url(images/header_logo_bg.png) repeat-x top left #000;
+  color: #fff;
+}
+#footer-content {
   max-width: 960px;
   margin: 0 auto;
+}
+#footer a {
+  text-decoration: none;
+  color: #fff;
+}
+#footer a:hover {
+  text-decoration: underline;
+}
+#footer h3 {
+  font-size: 90%;
+}
+#footer li {
+  margin: .5em 0;
 }
 #copyright {
   max-width: 960px;
@@ -247,6 +269,22 @@ body {
   font-size: 60%;
   text-align: center;
   letter-spacing: 0;
+}
+#social-media-icons {
+  font-size: 125%;
+  text-align: center;
+}
+#social-media-icons a {
+  font-size: 0;
+  color: #999;
+}
+#social-media-icons a:hover {
+  color: #fff;
+}
+#social-media-icons i {
+  margin: 0 .25em;
+  font-size: 22px;
+  
 }
 
 @media all and (min-width: 35.5em) {
@@ -434,10 +472,11 @@ body {
   <div id="hp-events" class="pure-u-1 pure-u-md-1-3">
     <h3>Events</h3>
     <ul>
-      <li><div class="event-date">October 31</div><a href="#">Event goes here</a></li>
-      <li><a href="#">Event goes here</a></li>
-      <li><a href="#">Event goes here</a></li>
-      <li><a href="#">Event goes here</a></li>
+      <li><span class="event-title"><a href="#">‘A Night of Amiri Baraka’ to Be Performed at Dante Hall Theater in Atlantic City</a></span><span class="event-date">October 31</span></li>
+      <li><span class="event-title"><a href="#">Speech by New York Times Writer Charles Bagli on Atlantic City’s Future</a></span><span class="event-date">November 14</span></li>
+      <li><span class="event-title"><a href="#">Council of Black Faculty and Staff To Honor Five at Dinner Ceremony</a></span><span class="event-date">December 2</span></li>
+      <li><span class="event-title"><a href="#">Women in Comedy</a></span><span class="event-date">December 17</span></li>
+      <li><span class="event-title"><a href="#">International Education Week</a></span><span class="event-date">December 25</span></li>
     </ul>
     <p id="more-events"><a href="#" class="pure-button">More Events <i class="fa fa-angle-right"></i></a></p>
   </div>
@@ -447,26 +486,55 @@ body {
     <h3>Ads</h3>
   </div>
   <div class="pure-u-1 pure-u-md-1-2">
-    <h3>Audience</h3>
+    <h3>Find Information For</h3>
+    <ul>
+      <li><a href="#">Alumni</a></li>
+      <li><a href="#">Community &amp; Visitors</a></li>
+      <li><a href="#">Current Students, Faculty &amp; Staff</a></li>
+      <li><a href="#">Parents &amp; Family</a></li>
+      <li><a href="#">Prospective Students</a></li>
+    </ul>
   </div>
 </div>
 <div id="footer" class="pure-g">
-	<div class="pure-u-1 pure-u-md-1-4">
-    	<h3>Column 1</h3>
+  <div id="footer-content">
+	<div class="pure-u-1-2 pure-u-md-1-4">
+      <ul>
+    	<li><a href="#">Bookstore</a></li>
+    	<li><a href="#">Library</a></li>
+    	<li><a href="#">Employment</a></li>
+    	<li><a href="#">Safety Information</a></li>
+    	<li><a href="#">News Archive</a></li>
+    	<li><a href="#">Statements &amp; Policies</a></li>
+    	<li><a href="#">Doing Business With Stockton</a></li>  
+      </ul>
   	</div>
-  	<div class="pure-u-1 pure-u-md-1-4">
-    	<h3>Column 2</h3>
+  	<div class="pure-u-1-2 pure-u-md-1-4">
+      <ul>
+    	<li><a href="#">Visit the Office of the President</a></li>	
+    	<li><a href="#">Read our E-Zine: Stockton Now</a></li>
+    	<li id="green-college-badge"><a href="#">New Jersey's Green College</a></li>
+      </ul>	
   	</div>
-  	<div class="pure-u-1 pure-u-md-1-4">
-    	<h3>Column 3</h3>
+  	<div class="pure-u-1-2 pure-u-md-1-4">
+      <h3>Column 2</h3>
   	</div>
-  	<div class="pure-u-1 pure-u-md-1-4">
-    	<h3>Column 4</h3>
+  	<div class="pure-u-1-2 pure-u-md-1-4">
+      <h3>The Richard Stockton College of New Jersey</h3>
+      <p>101 Vera King Farris Drive<br />
+	  Galloway, NJ 08205-9441<br />
+	  (609) 652-1776</p>
+	  <p><i class="fa fa-map-marker"></i> <a href="#">Maps &amp; Directions</a></p>
   	</div>
+  	<div id="copyright" class="pure-u-1">
+	  <div id="social-media-icons">
+	    <a href="#"><i class="fa fa-facebook-square"></i>Facebook</a> <a href="#"><i class="fa fa-twitter"></i>Twitter</a> <a href="#"><i class="fa fa-youtube-play"></i>YouTube</a> <a href="#"><i class="fa fa-instagram"></i>Instagram</a> <a href="#"><i class="fa fa-linkedin-square"></i>LinkedIn</a> <a href="#"><i class="fa fa-pinterest"></i>Pinterest</a> <a href="#"><i class="fa fa-google-plus"></i>Google+</a>
+	  </div>
+	  <p>&copy;2014 The Richard Stockton College of New Jersey</p>
+   </div>
+  </div>
 </div>
-<div id="copyright" class="pure-g">
-	<p>Footer goes here.</p>
-</div>
+
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
