@@ -89,6 +89,9 @@ body {
   text-decoration: underline;
   background: none;
 }
+#top-nav .long-nav, #nav .long-nav {
+  display: none;
+}
 #search form {
   margin: 20px auto;
   text-align: center;
@@ -110,19 +113,20 @@ body {
   border: none;
 }
 #nav {
-  width: 46%;
-  margin-bottom: 20px;
+  width: 50%;
   padding-right: 20px;
+  padding-bottom: 20px;
   font-size: 85%;
   letter-spacing: 0;
   height: 1%;
   background-color: #000;
-  border-right: 1px solid #4e4e4e;
 }
 #nav ul {
   display: block;
   max-width: 960px;
   margin: 0 auto;
+  padding-right: 18px;
+  border-right: 1px solid #4e4e4e;
 }
 #nav:after {
   content: "."; 
@@ -259,12 +263,16 @@ body {
 #footer h3 {
   font-size: 90%;
 }
+#footer ul {
+  list-style: none;
+  padding: 0 0 0 10px;
+}
 #footer li {
   margin: .5em 0;
 }
 #copyright {
   max-width: 960px;
-  margin: 0 auto;
+  margin: 10px auto;
 } 
 #copyright p {
   font-size: 60%;
@@ -328,8 +336,11 @@ body {
   	display: block;
     width: 100%;
     margin: 0;
+    padding: 0;
     font-size: 90%;
     background: url(images/nav_bg.png) repeat-x top left #4178a1;
+  }
+  #nav ul {
     border: none;
   }
   #nav a {
@@ -344,6 +355,9 @@ body {
   }
   #top-nav li, #nav li {
     display: inline-block;
+  }
+  #top-nav .long-nav, #nav .long-nav {
+    display: inline;
   }
   #story p {
     display: block;
@@ -402,7 +416,7 @@ body {
 	  <div class="pure-u-1">
 		<div id="top-nav" class="pure-menu pure-menu-open pure-menu-horizontal">
 		  <ul>
-			<li class="first"><a href="#">GoStockton Portal Login</a></li>
+			<li class="first"><a href="#">GoStockton Portal<span class="long-nav"> Login</span></a></li>
 			<li><a href="#">Apply</a></li>
 			<li><a href="#">Give</a></li>
 			<li><a href="#">Contact/Directory</a></li>
@@ -424,9 +438,9 @@ body {
     <ul>
       <li class="first"><a href="#">About Stockton</a></li>
       <li><a href="#">Academics</a></li>
-      <li><a href="#">Admissions, Scholarships & Aid</a></li>
+      <li><a href="#">Admissions<span class="long-nav">, Scholarships & Aid</span></a></li>
       <li><a href="#">Campus Life</a></li>
-      <li><a href="#">Athletics & Recreation</a></li>
+      <li><a href="#">Athletics<span class="long-nav"> & Recreation</span></a></li>
       <li><a href="#">Arts & Culture</a></li>
       <li class="last"><a href="#">Support Stockton</a></li>
     </ul>
