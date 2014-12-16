@@ -21,6 +21,9 @@
 body {
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
+p {
+  line-height: 1.5em;
+}
 #site-wrapper {
   margin: 0 auto;
 }
@@ -214,8 +217,11 @@ body {
 #hp-news {
   background-color: #ededed;
 }
+#hp-news .news-title {
+  font-size: 110%;
+}
 #hp-news li, #hp-events li {
-  margin: .5em 0;
+  margin: 1em 0;
   font-size: 80%;
   line-height: 1.5em;
 }
@@ -297,6 +303,9 @@ body {
 }
 
 @media all and (min-width: 35.5em) {
+  #rsc-branding {
+    display: block;
+  }
   #rsc-logo {
     float: left;
     padding: 0;
@@ -325,6 +334,9 @@ body {
   #top-nav ul {
     width: 100%;
   }
+  #top-nav .last a {
+    padding-right: 0;
+  }
   #search, #search form {
     display: inline;
   }
@@ -338,16 +350,18 @@ body {
   #nav {
   	display: block;
     width: 100%;
+    clear: both;
     margin: 0;
     padding: 0;
     font-size: 90%;
     background: url(images/nav_bg.png) repeat-x top left #4178a1;
+    border-bottom: 1px solid #285D84;
   }
   #nav ul {
     border: none;
   }
   #nav a {
-    padding: 9px 10px;
+    padding: 9px 10px 6px 10px;
     color: #000;
     white-space: no-wrap;
   }
@@ -381,10 +395,38 @@ body {
     position: absolute;
     z-index: 1000;
     display: block;
-    bottom: 0;
-    left: 50%;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
+  #story-nav a {
+    font-size: 0px;
+    outline: none;
+    color: #fff;
+  }
+  #story-nav a:hover {
+    color: #ffc423;
+  }
+  #story-nav a i {
+    margin: 0 .25em;
+    font-size: 50px;
+  }
+  #story-nav #prev {
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    top: 50%;
+    left: 0;
+  }
+  #story-nav #next {
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    top: 50%;
+    right: 0;
+  }
+  
   #story h2 {
     font-size: 1.6em
   }
@@ -474,8 +516,8 @@ body {
 
 	</div>
 	<div id="story-nav">
-    	<a href=# id="prev">Prev</a> 
-    	<a href=# id="next">Next</a>
+    	<a href=# id="prev"><i class="fa fa-chevron-left"></i>Previous</a> 
+    	<a href=# id="next"><i class="fa fa-chevron-right"></i>Next</a>
 	</div>
 	<div id="adv-custom-caption"></div>
 </div>
@@ -483,10 +525,10 @@ body {
   <div id="hp-news" class="pure-u-1 pure-u-md-2-3">
     <h3>News</h3>
     <ul>
-      <li><a href="#">Stockton Board Votes to Petition to Be Recognized as Comprehensive University</a></li>
-      <li><a href="#">Stockton #9 in Public Regional Universities of the North</a></li>
-      <li><a href="#">Stockton Dedicates Dr. Demetrios Constantelos Hellenic Collection and Reading Room</a></li>
-      <li><a href="#">Stockton’s ‘You Make the Difference’ Campaign Raises $25.36 Million, Exceeding Goals</a></li>
+      <li><div class="news-category">Stockton Acquires Showboat</div><div class="news-title"><a href="#">Stockton College to Convert Former Showboat Casino into Branch Campus in Atlantic City</a></div><div class="news-teaser">Access to Education, More Jobs and a University Park to Revitalize City</div></li>
+      <li><div class="news-category">Fall Commencement</div><div class="news-title"><a href="#">Founding Faculty Member William Daly Tells Graduates: Stockton Is 'Different and Better'</a></div><div class="news-teaser">Over 700 Take Part in Commencement Ceremony</div></li>
+      <li><div class="news-category">University Status</div><div class="news-title"><a href="#">Stockton Board Votes to Petition to Be Recognized as Comprehensive University</a></div><div class="news-teaser">Change Would Highlight Stockton's Evolution and Reflect Its Current Status</div></li>
+      <li><div class="news-category">U.S. News &amp; World Report Rankings</div><div class="news-title"><a href="#">Stockton #9 in Public Regional Universities of the North</a></div><div class="news-teaser">Report Also Cites Stockton as Among 'Best for Veterans'</div></li>
     </ul>
     <p id="more-news"><a href="#" class="pure-button">More News <i class="fa fa-angle-right"></i></a></p>
   </div>
@@ -541,7 +583,7 @@ body {
       <h3>Column 3</h3>
   	</div>
   	<div class="pure-u-1-2 pure-u-md-1-4">
-      <h3>The Richard Stockton College of New Jersey</h3>
+      <h3>Stockton University</h3>
       <p>101 Vera King Farris Drive<br />
 	  Galloway, NJ 08205-9441<br />
 	  (609) 652-1776</p>
