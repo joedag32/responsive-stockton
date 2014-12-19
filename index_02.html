@@ -200,22 +200,23 @@ p {
   background: rgba(0,0,0);
   background: rgba(0,0,0,0.5);
 }
-#hp-news-events {
+#hp-content-wrapper {
   max-width: 960px;
   margin: 0 auto;
 }
+#hp-news-events {
+}
 #hp-news-events h3 {
-  margin: 1em;
+  margin: 1em 1em 1em 0;
+  padding-bottom: .3em;
   font-size: 1.5em;
   font-weight: normal;
+  border-bottom: 2px solid #ffc423;
 }
 #hp-news-events ul {
   list-style: none;
   margin: 0;
   padding: 0 1.4em;
-}
-#hp-news {
-  background-color: #ededed;
 }
 #hp-news .news-title, #hp-events .event-title {
   font-size: 130%;
@@ -234,12 +235,8 @@ p {
   color: #002a5c;
 }
 #hp-news p, #hp-events p {
-  float: right;
   font-size: 80%;
   margin: 1em;
-}
-#hp-events {
-  background-color: #f7f7f7;
 }
 #hp-events .event-date {
   display: block;
@@ -248,6 +245,47 @@ p {
 #hp-ads-audience {
   max-width: 960px;
   margin: 0 auto;
+}
+#hp-audience {
+  margin: 20px 0 0 0;
+  background: #f7f7f7;
+}
+#hp-audience h3 {
+  margin: 0;
+  padding: 1em 1em 0 1em;
+  font-size: 90%;
+}
+#hp-audience ul {
+  list-style: none;
+  padding: 0 1em 10px 1em;
+}
+#hp-audience li {
+  margin: .8em; 0;
+  padding: 0;
+  font-size: 90%;
+}
+#hp-audience li a {
+  text-decoration: none;
+  color: #0069aa;
+}
+#hp-audience li a:hover {
+  text-decoration: underline;
+  color: #002a5c;
+}
+#hp-ads ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#hp-ads li {
+  margin: 10px 0;
+}
+#hp-ads li a {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
 }
 #footer {
   font-size: 80%;
@@ -299,7 +337,6 @@ p {
 #social-media-icons i {
   margin: 0 .25em;
   font-size: 22px;
-  
 }
 
 @media all and (min-width: 35.5em) {
@@ -425,8 +462,7 @@ p {
     display: block;
     top: 50%;
     right: 0;
-  }
-  
+  } 
   #story h2 {
     font-size: 1.6em
   }
@@ -521,44 +557,55 @@ p {
 	</div>
 	<div id="adv-custom-caption"></div>
 </div>
-<div id="hp-news-events" class="pure-g">
-  <div id="hp-news" class="pure-u-1 pure-u-md-1-2">
-    <h3>News</h3>
-    <ul>
-      <li><div class="news-category">Stockton Acquires Showboat</div><div class="news-title"><a href="#">Stockton College to Convert Former Showboat Casino into Branch Campus in Atlantic City</a></div><div class="news-teaser">Access to Education, More Jobs and a University Park to Revitalize City</div></li>
-      <li><div class="news-category">Fall Commencement</div><div class="news-title"><a href="#">Founding Faculty Member William Daly Tells Graduates: Stockton Is 'Different and Better'</a></div><div class="news-teaser">Over 700 Take Part in Commencement Ceremony</div></li>
-      <li><div class="news-category">University Status</div><div class="news-title"><a href="#">Stockton Board Votes to Petition to Be Recognized as Comprehensive University</a></div><div class="news-teaser">Change Would Highlight Stockton's Evolution and Reflect Its Current Status</div></li>
-      <li><div class="news-category">U.S. News &amp; World Report Rankings</div><div class="news-title"><a href="#">Stockton #9 in Public Regional Universities of the North</a></div><div class="news-teaser">Report Also Cites Stockton as Among 'Best for Veterans'</div></li>
-    </ul>
-    <p id="more-news"><a href="#" class="pure-button">More News <i class="fa fa-angle-right"></i></a></p>
-  </div>
-  <div id="hp-events" class="pure-u-1 pure-u-md-1-2">
-    <h3>Events</h3>
-    <ul>
-      <li><div class="event-date">October 31</div><div class="event-title"><a href="#">‘A Night of Amiri Baraka’ to Be Performed at Dante Hall Theater in Atlantic City</a></div><div class="event-teaser">Check Out the Upcoming SCOSA Events and Register for a Program!</div></li>
-      <li><div class="event-date">November 14</div><div class="event-title"><a href="#">Speech by New York Times Writer Charles Bagli on Atlantic City’s Future</a></div><div class="event-teaser">Participate in Our Celebration of Dr. King's Legacy!</div></li>
-      <li><div class="event-date">December 2</div><div class="event-title"><a href="#">Council of Black Faculty and Staff To Honor Five at Dinner Ceremony</a></div><div class="event-teaser">Register for a Screenwriting Workshop Today!</div></li>
-      <li><div class="event-date">December 17</div><div class="event-title"><a href="#">Women in Comedy</a></div><div class="event-teaser">Test Location Information</div></li>
-      <li><div class="event-date">December 25</div><div class="event-title"><a href="#">International Education Week</a></div><div class="event-teaser">Gov. Thomas Kean to Accept Distinguished Lifetime Achievement Award</div></li>
-    </ul>
-    <p id="more-events"><a href="#" class="pure-button">More Events <i class="fa fa-angle-right"></i></a></p>
+<div class="pure-g">
+  <div id="hp-content-wrapper">
+    <div id="hp-news-events" class="pure-u-1 pure-u-md-2-3">
+      <div id="hp-news">
+        <h3>News</h3>
+        <ul>
+          <li><div class="news-category">Stockton Acquires Showboat</div><div class="news-title"><a href="#">Stockton College to Convert Former Showboat Casino into Branch Campus in Atlantic City</a></div><div class="news-teaser">Access to Education, More Jobs and a University Park to Revitalize City</div></li>
+          <li><div class="news-category">Fall Commencement</div><div class="news-title"><a href="#">Founding Faculty Member William Daly Tells Graduates: Stockton Is 'Different and Better'</a></div><div class="news-teaser">Over 700 Take Part in Commencement Ceremony</div></li>
+          <li><div class="news-category">University Status</div><div class="news-title"><a href="#">Stockton Board Votes to Petition to Be Recognized as Comprehensive University</a></div><div class="news-teaser">Change Would Highlight Stockton's Evolution and Reflect Its Current Status</div></li>
+          <li><div class="news-category">U.S. News &amp; World Report Rankings</div><div class="news-title"><a href="#">Stockton #9 in Public Regional Universities of the North</a></div><div class="news-teaser">Report Also Cites Stockton as Among 'Best for Veterans'</div></li>
+        </ul>
+        <p id="more-news"><a href="#" class="pure-button">More News <i class="fa fa-angle-right"></i></a></p>
+      </div>
+      <div id="hp-events">
+        <h3>Events</h3>
+        <ul>
+          <li><div class="event-date">October 31</div><div class="event-title"><a href="#">‘A Night of Amiri Baraka’ to Be Performed at Dante Hall Theater in Atlantic City</a></div><div class="event-teaser">Check Out the Upcoming SCOSA Events and Register for a Program!</div></li>
+          <li><div class="event-date">November 14</div><div class="event-title"><a href="#">Speech by New York Times Writer Charles Bagli on Atlantic City’s Future</a></div><div class="event-teaser">Participate in Our Celebration of Dr. King's Legacy!</div></li>
+          <li><div class="event-date">December 2</div><div class="event-title"><a href="#">Council of Black Faculty and Staff To Honor Five at Dinner Ceremony</a></div><div class="event-teaser">Register for a Screenwriting Workshop Today!</div></li>
+          <li><div class="event-date">December 17</div><div class="event-title"><a href="#">Women in Comedy</a></div><div class="event-teaser">Test Location Information</div></li>
+          <li><div class="event-date">December 25</div><div class="event-title"><a href="#">International Education Week</a></div><div class="event-teaser">Gov. Thomas Kean to Accept Distinguished Lifetime Achievement Award</div></li>
+        </ul>
+        <p id="more-events"><a href="#" class="pure-button">More Events <i class="fa fa-angle-right"></i></a></p>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <div id="hp-audience">
+        <h3>Find Information For</h3>
+        <ul>
+          <li><a href="#">Alumni</a></li>
+          <li><a href="#">Community &amp; Visitors</a></li>
+          <li><a href="#">Current Students, Faculty &amp; Staff</a></li>
+          <li><a href="#">Parents &amp; Family</a></li>
+          <li><a href="#">Prospective Students</a></li>
+        </ul>
+      </div>
+      <div id="hp-ads">
+        <ul>
+          <li><a href="#">Ad 1</a></li>
+          <li><a href="#">Ad 2</a></li>
+          <li><a href="#">Ad 3</a></li>
+          <li><a href="#">Ad 4</a></li>
+          <li><a href="#">Ad 5</a></li>
+        </ul>
+      </div> 
+    </div>
   </div>
 </div>
-<div id="hp-ads-audience" class="pure-g">
-  <div class="pure-u-1 pure-u-md-1-2">
-    <h3>Ads</h3>
-  </div>
-  <div class="pure-u-1 pure-u-md-1-2">
-    <h3>Find Information For</h3>
-    <ul>
-      <li><a href="#">Alumni</a></li>
-      <li><a href="#">Community &amp; Visitors</a></li>
-      <li><a href="#">Current Students, Faculty &amp; Staff</a></li>
-      <li><a href="#">Parents &amp; Family</a></li>
-      <li><a href="#">Prospective Students</a></li>
-    </ul>
-  </div>
-</div>
+
 <div id="footer" class="pure-g">
   <div id="footer-content">
 	<div class="pure-u-1-2 pure-u-md-1-4">
