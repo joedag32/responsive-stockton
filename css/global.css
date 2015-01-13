@@ -1,0 +1,358 @@
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #404040;
+}
+p {
+  line-height: 1.5em;
+}
+#site-wrapper {
+  margin: 0 auto;
+}
+#header {
+  position: relative;
+  background: url(../images/header_logo_bg.png) repeat-x top left #000;
+}
+#rsc-branding {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#rsc-logo {
+  margin: 0;
+  padding: 6px;
+}
+#rsc-logo a {
+  display: block;
+  width: 201px;
+  height: 36px;
+  margin: 0 auto;
+  text-indent: -9999em;
+  background: url(../images/rsc_logo_mobile.png) no-repeat top left;
+}
+#mobile-nav-btn, #sidebar-nav-btn {
+  position: absolute;
+  display: block;
+  top: 12px;
+  right: 10px;
+  padding: 6px;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+#mobile-nav-btn .icon-bar, #sidebar-nav-btn .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+#mobile-nav-btn .icon-bar+.icon-bar, #sidebar-nav-btn .icon-bar+.icon-bar {
+  margin-top: 3px;
+}
+#sidebar-nav-btn {
+  top: 0;
+  right: 10px;
+}
+#sidebar-nav-btn .icon-bar {
+  background-color: #000;
+}
+
+#rsc-nav-secondary, #nav, #sidebar {
+  display: none;
+}
+#top-nav {
+  position: absolute;
+  width: 40%;
+  margin: 62px 0 0 55%;
+  font-size: 85%;
+  background-color: #000;
+}
+#top-nav ul {
+}
+#top-nav li {
+  display: block;
+}
+#top-nav a {
+  padding: 5px 10px;
+  color: #fff;
+}
+#top-nav a:hover {
+  text-decoration: underline;
+  background: none;
+}
+#top-nav .long-nav, #nav .long-nav {
+  display: none;
+}
+#search form {
+  margin: 20px auto;
+  text-align: center;
+}
+#search form.pure-form input[type=text] {
+  display: inline;
+  margin: 0;
+}
+#search form input.pure-input-rounded {
+  width: 24em;
+  font-size: .6em;
+}
+#search .submit {
+  position: relative;
+  margin: 0 0 0 -30px;
+  padding: 0 10px 2px 10px;
+  text-indent: -9999em;
+  background: url(../images/magnifying_icon.png) no-repeat left top;
+  border: none;
+}
+#nav {
+  width: 50%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  font-size: 85%;
+  letter-spacing: 0;
+  height: 1%;
+  background-color: #000;
+}
+#nav ul {
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-right: 18px;
+  border-right: 1px solid #4e4e4e;
+}
+#nav:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both;
+  visibility: hidden;
+}
+#nav li {
+    display: block;
+    text-align: right;
+  }
+#nav a {
+  padding: 5px 10px;
+  color: #fff;
+  white-space: normal;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+#nav a:hover {
+  text-decoration: underline;
+  background: none;
+}
+
+#content {
+  position: relative;
+}
+#content-wrapper {
+  margin: 0 10px;
+}
+#content li {
+  line-height: 1.5em;
+}
+#content .page-title {
+  margin: .5em 40px .5em .5em;
+}
+
+#sidebar .side-nav-title {
+  color: #848484;
+}
+#sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#story {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+#story .cycle-slideshow img {
+  width: 100%;
+  height: auto;
+}
+#story h2 {
+  margin: 0;
+  padding: .4em;
+  font-size: 1em;
+  font-weight: normal;
+}
+#story h2 a {
+  text-decoration: none;
+  color: #fff;
+}
+#story h2 a:hover {
+  text-decoration: underline;
+}
+#story p {
+  display: none;
+}
+#story p a {
+  text-decoration: none;
+  color: #fff;
+}
+#story p a:hover {
+  text-decoration: underline;
+}
+#story #no-template-pager {
+  display: none;
+}
+#story-nav {
+  display: none;
+}
+#adv-custom-caption {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background: rgba(0,0,0);
+  background: rgba(0,0,0,0.5);
+}
+#hp-content-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#hp-news-events {
+}
+#hp-news-events h3 {
+  margin: 1em 0;
+  padding: 0 1em 0.3em .3em;
+  font-size: 1.5em;
+  font-weight: normal;
+  border-bottom: 2px solid #ffc423;
+}
+#hp-news-events ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.4em;
+}
+#hp-news .news-title, #hp-events .event-title {
+  font-size: 130%;
+}
+#hp-news li, #hp-events li {
+  margin: 1em 0;
+  font-size: 80%;
+  line-height: 1.5em;
+}
+#hp-news li a, #hp-events li a {
+  text-decoration: none;
+  color: #0069aa;
+}
+#hp-news li a:hover, #hp-events li a:hover {
+  text-decoration: underline;
+  color: #002a5c;
+}
+#hp-news p, #hp-events p {
+  font-size: 80%;
+  margin: 1.2em;
+}
+#hp-events .event-date {
+  display: block;
+  color: #666;
+}
+#hp-ads-audience {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#hp-audience {
+  margin: 20px 0 0 0;
+  background: #f7f7f7;
+}
+#hp-audience h3 {
+  margin: 0;
+  padding: 1em 1em 0 1em;
+  font-size: 90%;
+}
+#hp-audience ul {
+  list-style: none;
+  padding: 0 1em 10px 1em;
+}
+#hp-audience li {
+  margin: .8em; 0;
+  padding: 0;
+  font-size: 85%;
+}
+#hp-audience li a {
+  text-decoration: none;
+  color: #0069aa;
+}
+#hp-audience li a:hover {
+  text-decoration: underline;
+  color: #002a5c;
+}
+#hp-ads ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#hp-ads li {
+  margin: 10px 0;
+}
+#hp-ads li a {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: #ccc;
+}
+#content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#content h2 {
+  letter-spacing: normal;
+}
+#footer {
+  font-size: 80%;
+  background: url(../images/header_logo_bg.png) repeat-x top left #000;
+  border-top: 3px solid #ffc423;
+  color: #fff;
+}
+#footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#footer a {
+  text-decoration: none;
+  color: #fff;
+}
+#footer a:hover {
+  text-decoration: underline;
+}
+#footer h3 {
+  font-size: 90%;
+}
+#footer ul {
+  list-style: none;
+  padding: 0 0 0 10px;
+}
+#footer li {
+  margin: .5em 0;
+}
+#copyright {
+  max-width: 960px;
+  margin: 10px auto;
+} 
+#copyright p {
+  font-size: 60%;
+  text-align: center;
+  letter-spacing: 0;
+}
+#social-media-icons {
+  font-size: 125%;
+  text-align: center;
+}
+#social-media-icons a {
+  font-size: 0;
+  color: #999;
+}
+#social-media-icons a:hover {
+  color: #fff;
+}
+#social-media-icons i {
+  margin: 0 .25em;
+  font-size: 22px;
+}
