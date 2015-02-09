@@ -72,10 +72,11 @@
   display: inline;
 }
 #content .page-title {
-  margin: 0.83em 0;
-}
-#content-wrapper: {
   margin: 0;
+  padding: 0.83em 0;
+}
+.content-splash {
+  margin: 10px 0;
 }
 #sidebar {
   display: inline-block;
