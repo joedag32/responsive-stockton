@@ -7,20 +7,25 @@
   <title>Stockton University</title>
   <meta name="description" content="The Richard Stockton College of New Jersey">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+  <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+  <![endif]-->
+  
   <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
   <!--<![endif]-->
   
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,700" rel="stylesheet" type="text/css">
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/global.css" rel="stylesheet" type="text/css">
-  <link href="css/desktop.css" rel="stylesheet" type="text/css" media="all and (min-width: 35.5em)">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400italic,300,700,300italic,400' rel='stylesheet' type='text/css'>  
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/global_03.css" rel="stylesheet" type="text/css">
+  <link href="css/desktop_03.css" rel="stylesheet" type="text/css" media="all and (min-width: 35.5em)">
   <!--[if (lt IE 9)&(!IEMobile)]>
-    <link rel="stylesheet" type="text/css" href="css/desktop.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/desktop_03.css" media="all" />
   <![endif]-->
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -42,35 +47,38 @@
     </button>
     <div id="rsc-nav-secondary">
 	  <div class="pure-u-1">
-		<div id="top-nav" class="pure-menu pure-menu-open pure-menu-horizontal">
+		<div id="top-nav" class="pure-menu pure-menu-horizontal">
 		  <ul>
-			<li class="first"><a href="#">GoStockton Portal<span class="long-nav"> Login</span></a></li>
-			<li><a href="#">Apply</a></li>
-			<li><a href="#">Give</a></li>
-			<li><a href="#">Contact/Directory</a></li>
-			<li><a href="#">A-Z Index</a></li>
-			<li class="last"><a href="#">Calendars</a></li>
+			<li class="first"><a href="#" class="pure-menu-link">GoStockton Portal<span class="long-nav"> Login</span></a></li>
+			<li><a href="#" class="pure-menu-link">Apply</a></li>
+			<li><a href="#" class="pure-menu-link">Give</a></li>
+			<li><a href="#" class="pure-menu-link">Contact/Directory</a></li>
+			<li><a href="#" class="pure-menu-link">A-Z Index</a></li>
+			<li class="last"><a href="#" class="pure-menu-link">Calendars</a></li>
 		  </ul>
 		</div>
 		<div id="search">
-		  <form action="#" method="post" class="pure-form">
-			<input type="text" name="keyword" class="input pure-input-rounded" placeholder="Search..." />
-			<input type="submit" value="Search" class="submit" />
+		  <form action="#" method="post">
+			<input type="text" name="keyword" class="input" placeholder="Search..." />
+			<button type="submit" class="submit">
+              <span>Search</span>
+              <i class="fa fa-search"></i>
+            </button>
 			<input type="hidden" name="ie" value="UTF-8" />
 		  </form> 	
 		</div>
 	</div>
   </div>
   </div>
-  <div id="nav" class="pure-menu pure-menu-open pure-menu-horizontal">
-    <ul>
-      <li class="first"><a href="about_01.html">About Stockton</a></li>
-      <li><a href="#">Academics</a></li>
-      <li><a href="#">Admissions<span class="long-nav">, Scholarships & Aid</span></a></li>
-      <li><a href="#">Campus Life</a></li>
-      <li><a href="#">Athletics<span class="long-nav"> & Recreation</span></a></li>
-      <li><a href="#">Arts & Culture</a></li>
-      <li class="last"><a href="#">Support Stockton</a></li>
+  <div id="nav" class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item first"><a href="about_01.html" class="pure-menu-link">About Stockton</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Academics</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Admissions<span class="long-nav">, Scholarships & Aid</span></a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Campus Life</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Athletics<span class="long-nav"> & Recreation</span></a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Arts & Culture</a></li>
+      <li class="pure-menu-item last"><a href="#" class="pure-menu-link">Support Stockton</a></li>
     </ul>
   </div>
 </div>
@@ -88,14 +96,16 @@
     	data-cycle-pager="#no-template-pager"
     	data-cycle-pager-template=""
     	>
+    	<img src="images/stories/campus_center_night.jpg" alt="Campus Center" data-story-teaser="The Campus Center is Most Impressive" data-story-link="http://www.cnn.com">
     	<img src="images/stories/dancers.jpg" alt="Dancers" data-story-teaser="Dance in front of the Unified Science Center" data-story-link="http://www.cnn.com">
     	<img src="images/stories/fall_path.jpg" alt="The Story Title Goes Here" data-story-teaser="A very brief teaser for the story would go here" data-story-link="http://www.google.com">
-    	<img src="images/stories/campus_center.jpg" alt="Campus Center" data-story-teaser="A pretty awesome building and place for students" data-story-link="http://www.yahoo.com">
+    	<img src="images/stories/usc_night.jpg" alt="Unified Science Center" data-story-teaser="A pretty awesome building and place for students" data-story-link="http://www.yahoo.com">
 	</div>
 	<div id="no-template-pager" class="cycle-pager external">
+        <img src="images/stories/campus_center_night.jpg" alt="Campus Center" title="The Campus Center is Most Impressive" width="75" height="75">
         <img src="images/stories/dancers.jpg" alt="Dancers" title="Dance in front of the Unified Science Center" width="75" height="75">
     	<img src="images/stories/fall_path.jpg" alt="The Story Title Goes Here" title="A very brief teaser for the story would go here" width="75" height="75">
-    	<img src="images/stories/campus_center.jpg" alt="Campus Center" title="A pretty awesome building and place for students" width="75" height="75">
+    	<img src="images/stories/usc_night.jpg" alt="Unified Science Center" title="A pretty awesome building and place for students" width="75" height="75">
 
 	</div>
 	<div id="story-nav">
@@ -142,11 +152,11 @@
       </div>
       <div id="hp-ads">
         <ul>
-          <li><a href="#">Ad 1</a></li>
-          <li><a href="#">Ad 2</a></li>
-          <li><a href="#">Ad 3</a></li>
-          <li><a href="#">Ad 4</a></li>
-          <li><a href="#">Ad 5</a></li>
+          <li><a href="#"><img src="http://intraweb.stockton.edu/eyos/hp/content/images/promo/2014ApplyOnlineH.png" width="320" height="100" alt="Apply Online Now!" /></a></li>
+          <li><a href="#"><img src="http://intraweb.stockton.edu/eyos/hp/content/images/promo/2014ApplyOnlineH.png" width="320" height="100" alt="Apply Online Now!" /></a></li>
+          <li><a href="#"><img src="http://intraweb.stockton.edu/eyos/hp/content/images/promo/2014ApplyOnlineH.png" width="320" height="100" alt="Apply Online Now!" /></a></li>
+          <li><a href="#"><img src="http://intraweb.stockton.edu/eyos/hp/content/images/promo/2014ApplyOnlineH.png" width="320" height="100" alt="Apply Online Now!" /></a></li>
+          <li><a href="#"><img src="http://intraweb.stockton.edu/eyos/hp/content/images/promo/2014ApplyOnlineH.png" width="320" height="100" alt="Apply Online Now!" /></a></li>
         </ul>
       </div> 
     </div>
@@ -172,20 +182,27 @@
       </ul>
   	</div>
   	<div class="pure-u-1 pure-u-md-1-4 footer-links">
-      <ul>
-    	<li><a href="#">Visit the Office of the President</a></li>	
-    	<li><a href="#">Read our E-Zine: Stockton Now</a></li>
-    	<li id="green-college-badge"><a href="#">New Jersey's Green College</a></li>
-      </ul>	
+  	  <h3>Instructional Sites</h3>
+  	  <ul>
+  	    <li><a href="#">Atlantic City</a></li>
+  	    <li><a href="#">Hammonton</a></li>
+  	    <li><a href="#">Manahawkin</a></li>
+  	    <li><a href="#">Woodbine</a></li>
+  	  </ul>
+	  <img src="images/us_news_badge.png" width="115" height="120" alt="US News and World Report Best Colleges Regional Universities North 2015" class="us-news-badge" />
   	</div>
   	<div class="pure-u-1 pure-u-md-1-4 footer-links">
-      <h3>Column 3</h3>
+  	  <ul>
+    	<li><a href="#">Visit the Office of the President</a></li>	
+    	<li><a href="#">Read our E-Zine: Stockton Now</a></li>
+    	<img src="images/green_university_logo_sm.png" width="180" height="38" alt="New Jersey's Green University" class="green-university-badge" />
+      </ul>	
   	</div>
   	<div id="school-address" class="pure-u-1 pure-u-md-1-4">
-      <h3>Stockton University</h3>
-      <p>101 Vera King Farris Drive<br />
+      <p><strong>Stockton University</strong><br />
+      101 Vera King Farris Drive<br />
 	  Galloway, NJ 08205-9441<br />
-	  (609) 652-1776</p>
+	  <i class="fa fa-phone"></i> (609) 652-1776</p>
 	  <p><i class="fa fa-map-marker"></i> <a href="#">Maps &amp; Directions</a></p>
   	</div>
   	<div id="copyright" class="pure-u-1">

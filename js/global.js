@@ -7,4 +7,15 @@ $(document).ready(function() {
   $("#sidebar-nav-btn").click(function() {
     $("#sidebar").toggle();
   });
+  // toggle hamburger button for footer nav
+  $("#footer-nav-btn").click(function() {
+    $(".footer-links").toggle();
+  });
+  // reset on window resize
+  $(window).resize(function() {
+    var browserWidth = $(window).width();
+    if (browserWidth > 570) {
+      //alert('hello! window has been resized! Width is '+browserWidth);
+    }
+});
 });

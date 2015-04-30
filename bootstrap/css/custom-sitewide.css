@@ -1,0 +1,249 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.btn-default {
+  background-color: #f7f7f7;
+}
+#alert-container .alert {
+  margin: 0;
+  text-align: center;
+}
+#header {
+  background: url(../images/header_logo_bg.png) repeat-x left top #000;
+}
+#header .navbar-default {
+  background: none;
+  border: none;
+}
+#header .navbar {
+  margin-bottom: 0;
+}
+#header .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: none;
+}
+#header h1 {
+  margin: 6px 0 0 10px;
+  padding: 0;
+}
+#header h1 a {
+  width: 201px;
+  height: 36px;
+  background: url(../images/stockton_logo_mobile.png) no-repeat left top;
+}
+#header .navbar-form {
+  border: none;
+  box-shadow: none;
+}
+#header #secondary-nav-container {
+  position: relative;
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+#header #primary-nav-container {
+  width: 50%;
+  float: left;
+}
+#header #secondary-nav, #header #primary-nav {
+  margin-top: 60px;
+}
+#header .navbar-default .navbar-nav > li > a {
+  color: #dBdBdB;
+}
+#header #primary-nav {
+  border-left: 1px solid #323232;
+}
+#header #site-search {
+  position: absolute;
+  top: 0;
+  width: 200%;
+}
+#header #site-search .input-group .form-control:not(:first-child):not(:last-child) {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#wordmark-container {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e7e7e7;
+}
+#wordmark-container h2 {
+  float: left;
+}
+#wordmark-container .audience-nav {
+  float: right;
+  margin-top: 16px;
+}
+#content {
+  padding-top: 20px;
+}
+#hp-carousel-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+#hp-carousel-container .carousel-caption a {
+  color: #fff;
+}
+#hp-news h3, #hp-events h3 {
+  margin: 1em 0;
+  padding: 0 1em 0.3em .3em;
+  font-weight: normal;
+  border-bottom: 2px solid #ffc423;
+}
+#hp-news ul, #hp-events ul {
+  list-style: none;
+  padding: 0 1em;
+}
+#hp-news .news-title, #hp-events .event-title {
+  font-size: 18px;
+}
+#hp-news li, #hp-events li {
+  margin: 1em 0;
+  line-height: 1.5em;
+}
+#hp-news p, #hp-events p {
+  font-size: 80%;
+  margin: 1.2em;
+}
+#hp-audience {
+  margin: 20px 0 0 0;
+  background: #f8f8f8;
+  border: 1px solid #e7e7e7;
+}
+#hp-audience h3 {
+  margin: 0;
+  padding: 1em 1em 0 1em;
+  font-size: 16px;
+}
+#hp-audience ul {
+  list-style: none;
+  padding: 0 1em;
+}
+#hp-audience li {
+  margin: .8em; 0;
+  padding: 0;	 
+}
+#hp-promos img {
+  margin: 10px 0;
+}
+#footer {
+  padding-top: 15px;
+  text-align: center;
+  background: url(../../images/header_logo_bg.png) repeat-x top left #000;
+  border-top: 3px solid #ffc423;
+  color: #fff;
+}
+#footer a {
+  color: #fff;
+}
+#footer .footer-links {
+  list-style: none;
+  padding: 0;
+}
+#footer .us-news-badge {
+  margin: 4px 0;
+}
+#copyright p {
+  font-size: 85%;
+  text-align: center;
+}
+#social-media-icons {
+  margin-bottom: 6px;
+  font-size: 125%;
+  text-align: center;
+}
+#social-media-icons a {
+  font-size: 0;
+  color: #999;
+}
+#social-media-icons a:hover {
+  color: #fff;
+}
+#social-media-icons i {
+  margin: 0 .25em;
+  font-size: 22px;
+}
+@media (min-width: 768px) and (max-width:991px) {
+  #secondary-nav.nav > li > a {
+	padding: 10px;
+  }
+}
+@media (min-width: 768px) {
+	.navbar .navbar-nav {
+	  display: inline-block;
+	  float: none;
+	  vertical-align: top;
+	}
+	.navbar .navbar-collapse {
+	  text-align: center;
+	}
+	#header {
+	  background: url(../images/header_bg.png) repeat-x top left #427aa3;
+	  border-bottom: 1px solid #285d84;
+	}
+	#header a {
+	  color: #fff;
+	}
+	#header h1 {
+	  margin: 0;
+	  padding: 0;
+	  text-indent: -9999em;
+	}
+	#header h1 a {
+	  width: 298px;
+	  height: 120px;
+	  background: url(../images/stockton_logo.png) no-repeat left top;
+	}
+	#header #site-search {
+	  width: inherit;
+	  top: 42px;
+	  right: 0;
+	  margin: 0;
+	  text-align: right;
+	}
+	#header #secondary-nav, #header #primary-nav {
+	  margin-top: 0;
+	}
+	#header .navbar-default .navbar-nav > li > a {
+	  color: #fff;
+	}
+	#header #secondary-nav-container, #header #primary-nav-container {
+	  width: auto;
+	  float: none;
+	  text-align: left;
+	}
+	#header #secondary-nav {
+	  font-size: 85%;
+	}
+	#header #secondary-nav.navbar-nav > li > a {
+	  padding-top: 10px;
+	}
+	#header #secondary-nav.navbar-nav > li > a:hover {
+	  text-decoration: underline;
+	}
+	#header #primary-nav {
+	  border: none;
+	}
+	#header #primary-nav.navbar-nav > li > a {
+	  line-height: 16px;
+	}
+	#header #primary-nav li {
+	  font-size: 15px;
+	}
+	#header #primary-nav a:hover {
+	  color: #4178a1;
+	  background-color: #fff;
+	}
+	#hp-carousel-container .carousel-caption {
+	  background-color: rgba(0, 0, 0, 0.4);
+	}
+	#footer {
+	  text-align: left;
+	}
+	#footer .container {
+	  background: url(../../images/footer_seal_bg.png) no-repeat bottom center;
+	}
+	#footer .us-news-badge {
+	  float: right;
+	  margin: 0;
+	}
+}

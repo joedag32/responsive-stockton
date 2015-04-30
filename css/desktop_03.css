@@ -6,10 +6,10 @@
   padding: 0;
 }
 #rsc-logo a {
-  width: 298px;
+  width: 300px;
   height: 120px;
   margin: 0;
-  background: url(../images/rsc-logo.png) no-repeat top left;
+  background: url(../images/stockton_logo_3.png) no-repeat top left;
 }
 #mobile-nav-btn, #sidebar-nav-btn, #footer-nav-btn {
   display: none;
@@ -21,16 +21,19 @@
 }
 #top-nav {
   position: relative;
-  display: inline;
+  width: 100%;
   margin: 0;
+  padding: 0 0 0 25%;
   font-size: 11px;
   background: none;
 }
 #top-nav ul {
-  width: 100%;
+  margin: 0;
+  background-color: #1477b4;
+}
+#top-nav ul li {
 }
 #top-nav .last a {
-  padding-right: 0;
 }
 #search, #search form {
   display: inline;
@@ -49,21 +52,22 @@
   margin: 0;
   padding: 0;
   font-size: 90%;
-  background: url(../images/nav_bg.png) repeat-x top left #4178a1;
-  border-bottom: 1px solid #285D84;
+  background: url(../images/nav_bg_03.png) repeat-x top left #ffc424;
+  border-top: 1px solid #e0ab1b;
+  border-bottom: 1px solid #e0ab1b;
 }
 #nav ul {
   border: none;
 }
 #nav a {
-  padding: 9px 10px 6px 10px;
+  padding: 12px 10px 10px 10px;
   color: #000;
   white-space: no-wrap;
 }
 #nav a:hover {
   text-decoration: none;
   color: #4178a1;
-  background-color: #fff;
+  background-color: #ffe08a;
 }
 #top-nav li, #nav li {
   display: inline-block;
@@ -147,8 +151,14 @@
 #footer-content {
   background: url(../images/footer_seal_bg.png) no-repeat bottom center;
 }
+#footer ul {
+  text-align: left;
+}
 .footer-links {
   display: inline-block;
+}
+#footer .us-news-badge {
+  display: inline;
 }
 #school-address {
   text-align: left;
